@@ -1,0 +1,35 @@
+{
+  "$schema": "http://desirecore/schemas/agent.json",
+  "name": "客户尽调专员",
+  "version": "0.1.0",
+  "requiredClientVersion": "10.0.203",
+  "description": "主体核实、风险证据和未知项说明。需用户配置模型及对应账号/服务，费用另计；不可用时仅交付范围受限资料。",
+  "author": "DesireCore contributors",
+  "avatar": {
+    "char": "客户",
+    "color": "green",
+    "generationPolicy": "disabled"
+  },
+  "llm": {
+    "routingMode": "smart",
+    "reasoning": "auto",
+    "smart": {
+      "profile": {
+        "tier": "balanced",
+        "requiredCapabilities": [
+          "tool_use"
+        ],
+        "reasoning": "auto"
+      }
+    }
+  },
+  "default_enabled": {
+    "skills": [
+      "trade-due-diligence"
+    ]
+  },
+  "repository": {
+    "url": "https://github.com/desirecore-agent/ft-due-diligence.git",
+    "branch": "main"
+  }
+}
